@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<cart>
+    <productItem>
+        <idProd>3</idProd>
+        <qty>10</qty>
+    </productItem>
+    <productItem>
+        <idProd>2</idProd>
+        <qty>10</qty>
+    </productItem>
+    <productItem>
+        <idProd>4</idProd>
+        <qty>3</qty>
+    </productItem>
+    <productItem>
+        <idProd>9</idProd>
+        <qty>10</qty>
+    </productItem>
+</cart>

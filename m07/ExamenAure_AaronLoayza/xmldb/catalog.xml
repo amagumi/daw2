@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <product_item>
+        <id_product>1</id_product>
+        <name>T-shirt</name>
+        <quantity>75</quantity>
+        <price_item>
+            <price>15</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+
+    <product_item>
+        <id_product>2</id_product>
+        <name>Shoes</name>
+        <quantity>50</quantity>
+        <price_item>
+            <price>17</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+
+    <product_item>
+        <id_product>3</id_product>
+        <name>Pants</name>
+        <quantity>51</quantity>
+        <price_item>
+            <price>18</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+    
+    <product_item>
+        <id_product>4</id_product>
+        <name>Sandals</name>
+        <quantity>45</quantity>
+        <price_item>
+            <price>10</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+</catalogo>

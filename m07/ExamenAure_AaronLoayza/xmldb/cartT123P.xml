@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<cart>
+    <product_item>
+        <dni_user>T123P</dni_user>
+        <id_product>4</id_product>
+        <name>Sandals</name>
+        <quantity>20</quantity>
+        <price_item>
+            <price>10</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+    <product_item>
+        <dni_user>T123P</dni_user>
+        <id_product>3</id_product>
+        <name>Pants</name>
+        <quantity>9</quantity>
+        <price_item>
+            <price>18</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+</cart>

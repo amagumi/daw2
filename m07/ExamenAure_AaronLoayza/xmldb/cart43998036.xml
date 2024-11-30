@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cart>
+    <product_item>
+        <dni_user>43998036</dni_user>
+        <id_product>1</id_product>
+        <name>T-shirt</name>
+        <quantity>20</quantity>
+        <price_item>
+            <price>15</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+</cart>

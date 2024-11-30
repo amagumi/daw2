@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections>
+    <connection>
+        <dni>43998036</dni>
+        <password>L.040630</password>
+        <status>offline</status>
+        <date>2024-10-19 20:06:12</date>
+    </connection>
+    <connection>
+        <dni>123456</dni>
+        <password>aaron12345</password>
+        <status>offline</status>
+        <date>2024-10-19 20:23:22</date>
+    </connection>
+    <connection>
+        <dni>T123P</dni>
+        <password>12345678n</password>
+        <status>offline</status>
+        <date>2024-10-19 20:39:59</date>
+    </connection>
+    <connection>
+        <dni>123496</dni>
+        <password>aaron1234</password>
+        <status>offline</status>
+        <date>2024-10-20 11:07:31</date>
+    </connection>
+</connections>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<cart>
+    <productItem>
+        <idProd>1</idProd>
+        <prodName>pepino</prodName>
+        <qty>5</qty>
+        <price>0.75</price>
+    </productItem>
+    <productItem>
+        <idProd>2</idProd>
+        <prodName>manzana</prodName>
+        <qty>10</qty>
+        <price>2.5</price>
+    </productItem>
+</cart>

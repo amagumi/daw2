@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<users>
+    <user>
+        <dni>1</dni>
+        <name>juan</name>
+        <country>italia</country>
+        <password>123</password>
+    </user>
+    <user>
+        <dni>2</dni>
+        <name>ana</name>
+        <country>espana</country>
+        <password>123</password>
+    </user>
+    <user>
+        <dni>3</dni>
+        <name>asier</name>
+        <country>chile</country>
+        <password>123</password>
+    </user>
+</users>
