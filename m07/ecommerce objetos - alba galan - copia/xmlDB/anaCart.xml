@@ -12,4 +12,10 @@
         <qty>10</qty>
         <price>2.5</price>
     </productItem>
+    <productItem>
+        <idProd>3</idProd>
+        <prodName>uva</prodName>
+        <qty>6</qty>
+        <price>0.3</price>
+    </productItem>
 </cart>

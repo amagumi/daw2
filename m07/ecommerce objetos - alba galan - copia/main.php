@@ -26,7 +26,10 @@ $quantity = isset($_GET['quantity']) ? (int)$_GET['quantity'] : 1;
 
 
 switch ($action) {
-
+    
+    default:
+        echo "bienvenide <br><br>";
+        break;
     case 'addProduct': // ?action=addProduct&productId=ID DEL PROD&quantity=CANTIDAD
         $cart->addProduct($productId, $quantity);
         break;
@@ -42,9 +45,7 @@ switch ($action) {
     case 'showCatalog': // ?action=showCatalog
         $catalog->showCatalog();
         break;
-    default:
-        echo "Bienvenido a la tienda. Usa las acciones disponibles para interactuar.<br>";
-    break;
+
 }
 
 
