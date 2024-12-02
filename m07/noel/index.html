@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios de Acciones</title>
+</head>
+<body>
+
+    <h1>Formularios de Acciones</h1>
+
+    <!-- Formulario de Login -->
+    <form action="main_obj_2.php" method="POST">
+        <h2>Login</h2>
+        <input type="hidden" name="action" value="login">
+        <label for="user_id">User ID:</label>
+        <input type="text" name="user_id" required><br>
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Formulario de Registro -->
+    <form action="main_obj_2.php" method="POST">
+        <h2>Registrar Nuevo Usuario</h2>
+        <input type="hidden" name="action" value="register">
+        <label for="user_id">User ID:</label>
+        <input type="text" name="user_id" required><br>
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <!-- Formulario de Logout -->
+    <form action="main_obj_2.php" method="POST">
+        <h2>Logout</h2>
+        <input type="hidden" name="action" value="logout">
+        <button type="submit">Logout</button>
+    </form>
+
+    <!-- Formulario Añadir al Carrito -->
+    <form action="main_obj_2.php" method="GET">
+        <h2>Añadir al Carrito</h2>
+        <input type="hidden" name="action" value="add_to_cart">
+        <label for="id_producto">ID Producto:</label>
+        <input type="text" name="id_producto" required><br>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" name="cantidad" required><br>
+        <button type="submit">Añadir al Carrito</button>
+    </form>
+
+    <!-- Formulario Eliminar del Carrito -->
+    <form action="main_obj_2.php" method="GET">
+        <h2>Eliminar del Carrito</h2>
+        <input type="hidden" name="action" value="remove_from_cart">
+        <label for="id_producto">ID Producto:</label>
+        <input type="text" name="id_producto" required><br>
+        <button type="submit">Eliminar del Carrito</button>
+    </form>
+
+    <!-- Formulario Modificar Carrito -->
+    <form action="main_obj_2.php" method="GET">
+        <h2>Modificar Carrito</h2>
+        <input type="hidden" name="action" value="modify_from_cart">
+        <label for="id_producto">ID Producto:</label>
+        <input type="text" name="id_producto" required><br>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" name="cantidad" required><br>
+        <label for="realizar">Acción:</label>
+        <select name="realizar" required>
+            <option value="sumar">Sumar</option>
+            <option value="restar">Restar</option>
+            <option value="indicar">Indicar</option>
+        </select><br>
+        <button type="submit">Modificar Carrito</button>
+    </form>
+
+    <!-- Formulario Ver Carrito -->
+    <form action="main_obj_2.php" method="GET">
+        <h2>Ver Carrito</h2>
+        <input type="hidden" name="action" value="view_cart">
+        <button type="submit">Ver Carrito</button>
+    </form>
+
+    <!-- Formulario Añadir al Catálogo -->
+    <form action="main_obj_2.php" method="GET">
+        <h2>Añadir al Catálogo</h2>
+        <input type="hidden" name="action" value="add_to_catalog">
+        <label for="id_producto">ID Producto:</label>
+        <input type="text" name="id_producto" required><br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required><br>
+        <label for="precio">Precio:</label>
+        <input type="number" step="0.01" name="precio" required><br>
+        <label for="moneda">Moneda:</label>
+        <input type="text" name="moneda" required><br>
+        <label for="stock">Stock:</label>
+        <input type="number" name="stock" required><br>
+        <button type="submit">Añadir al Catálogo</button>
+    </form>
+
+    <!-- Formulario Eliminar del Catálogo -->
+    <form action="main_obj_2.php" method="GET">
+        <h2>Restar Stock del Catálogo</h2>
+        <input type="hidden" name="action" value="remove_from_catalog">
+        <label for="id_producto">ID Producto:</label>
+        <input type="text" name="id_producto" required><br>
+        <label for="restar">Cantidad a Restar:</label>
+        <input type="number" name="restar" required><br>
+        <button type="submit">Eliminar del Catálogo</button>
+    </form>
+
+    <!-- Formulario Añadir Stock en Catálogo -->
+    <form action="main_obj_2.php" method="GET">
+        <h2>Añadir Stock del Catálogo</h2>
+        <input type="hidden" name="action" value="add_stock_to_catalog">
+        <label for="id_producto">ID Producto:</label>
+        <input type="text" name="id_producto" required><br>
+        <label for="stock">Añadir:</label>
+        <input type="number" name="sumar" required><br>
+        <button type="submit">Añadir Stock</button>
+    </form>
+    
+    <!-- Formulario Modificar Stock en Catálogo -->
+    <form action="main_obj_2.php" method="GET">
+        <h2>Modificar Stock en el Catálogo</h2>
+        <input type="hidden" name="action" value="modify_from_catalog">
+        <label for="id_producto">ID Producto:</label>
+        <input type="text" name="id_producto" required><br>
+        <label for="stock">Nuevo Stock:</label>
+        <input type="number" name="stock" required><br>
+        <button type="submit">Modificar Stock</button>
+    </form>
+
+    <!-- Formulario Ver Catálogo -->
+    <form action="main_obj_2.php" method="GET">
+        <h2>Ver Catálogo</h2>
+        <input type="hidden" name="action" value="view_catalog">
+        <button type="submit">Ver Catálogo</button>
+    </form>
+
+</body>
+</html>
