@@ -9,7 +9,7 @@ class clsUser
     private $country;
     private $password;
 
-    
+
     public function __construct($dni, $name, $country, $password)
     {
         $this->dni = $dni;
@@ -27,7 +27,7 @@ class clsUser
     public function getName()
     {
         return $this->name;
-    } 
+    }
 
     public function getCountry()
     {
@@ -71,7 +71,7 @@ class clsUser
 
 
     //function create user
-    ////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////
 
     // function userRegister($dni, $name, $country, $password) //el dni es el username
     // {

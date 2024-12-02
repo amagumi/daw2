@@ -11,7 +11,7 @@ $catalog = new clsCatalog();
 
 // users
 
-////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
 $user = $users->login(2); // se introduce el dni del usuario por parametro y se almacena en la variable user
 $username = $user->getName(); // se recoge el nombre del objeto user mediante un getter
@@ -26,7 +26,7 @@ $quantity = isset($_GET['quantity']) ? (int)$_GET['quantity'] : 1;
 
 
 switch ($action) {
-    
+
     default:
         echo "bienvenide <br><br>";
         break;
@@ -34,7 +34,7 @@ switch ($action) {
         $cart->addProduct($productId, $quantity);
         break;
 
-    case 'removeProduct': 
+    case 'removeProduct':
         $cart->removeFromCart($username, 6);
         break;
 
@@ -45,7 +45,6 @@ switch ($action) {
     case 'showCatalog': // ?action=showCatalog
         $catalog->showCatalog();
         break;
-
 }
 
 

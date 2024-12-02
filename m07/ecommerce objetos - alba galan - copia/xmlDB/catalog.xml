@@ -90,4 +90,10 @@
         <qty>1300</qty>
         <price>2</price>
     </product>
+    <product>
+        <idProd>16</idProd>
+        <prodName>maiz</prodName>
+        <qty>1300</qty>
+        <price>1</price>
+    </product>
 </catalog>
