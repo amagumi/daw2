@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user id="49909199">
+        <username>noel</username>
+        <password>123</password>
+    </user>
+    <user id="12345678">
+        <username>yoman</username>
+        <password>4567</password>
+    </user>
+    <user id="12345">
+        <username>test</username>
+        <password>123</password>
+    </user>
+    <user id="4321">
+        <username>pruebas</username>
+        <password>1234</password>
+    </user>
+    <user id="1">
+        <username>Neuel</username>
+        <password>123</password>
+    </user>
+<user id="713"><username>alba</username><password>123</password></user></users>

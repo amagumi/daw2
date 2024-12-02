@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login y Acciones</title>
+    </head>
+    <body>
+        <h1>Bienvenide</h1>
+
+        <form method="GET" action="main.php">
+            <label for="userId">ID de Usuario:</label>
+            <input type="number" id="userId" name="userId" required>
+            <input type="hidden" name="action" value="login">
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+
+        <br><br>
+
+        <form method="GET" action="main.php">
+            <input type="hidden" name="action" value="showCatalog">
+            <button type="submit">Mostrar Catálogo</button>
+        </form>
+
+        <form method="GET" action="main.php">
+            <label for="productId">ID del Producto:</label>
+            <input type="number" id="productId" name="productId" required>
+            <label for="quantity">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity" value="1"
+                required>
+            <input type="hidden" name="action" value="addProduct">
+            <button type="submit">Añadir Producto</button>
+        </form>
+
+        <form method="GET" action="main.php"> <input type="hidden" name="action"
+                value="showCart"> <label for="userIdCart">ID de Usuario:</label>
+            <input type="number" id="userIdCart" name="userId" required> <button
+                type="submit">Mostrar Carrito</button>
+        </form>
+
+        <form method="GET" action="main.php">
+            <input type="hidden" name="action" value="removeProduct">
+            <button type="submit">Eliminar Producto (ID Fijo)</button>
+        </form>
+    </body>
+</html>
