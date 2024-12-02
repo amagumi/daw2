@@ -18,4 +18,10 @@
         <country>chile</country>
         <password>123</password>
     </user>
+    <user>
+        <dni>4</dni>
+        <name>mama</name>
+        <country>colombia</country>
+        <password>123</password>
+    </user>
 </users>

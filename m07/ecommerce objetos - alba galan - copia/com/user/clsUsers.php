@@ -52,7 +52,7 @@ class clsUsers
 
     public function login($dni)
     {
-        $user = $this->fetchDni($dni); 
+        $user = $this->fetchDni($dni);
         if ($user != null) {
             // echo "Bienvenido, " . $user->getName() . "!";
             return $user;
@@ -83,7 +83,7 @@ class clsUsers
 
     // Log()
     //function create user
-    ////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////
 
     // function userRegister($dni, $name, $country, $password) //el dni es el username
     // {
