@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login y Acciones</title>
-    </head>
-    <body>
-        <h1>Bienvenide</h1>
 
-        <form method="GET" action="main.php">
-            <label for="userId">ID de Usuario:</label>
-            <input type="number" id="userId" name="userId" required>
-            <input type="hidden" name="action" value="login">
-            <button type="submit">Iniciar Sesión</button>
-        </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Usuario</title>
+</head>
 
-        <br><br>
+<body class="bodyIndex">
+    <h1>Carrito de Usuario</h1>
 
-        <form method="GET" action="main.php">
+    <!-- Botón para volver al login -->
+    <div>
+        <a href="login.html"><button>Volver al Login</button></a>
+    </div>
+
+    <!-- Funcionalidades del carrito -->
+    <div class="container">
+        <p>ID del Usuario: <span id="userIdDisplay"></span></p>
+
+        <!-- Formulario para mostrar el catálogo -->
+        <form action="main.php" method="get">
             <input type="hidden" name="action" value="showCatalog">
-            <button type="submit">Mostrar Catálogo</button>
+            <input type="hidden" name="userId" id="userIdInput">
+            <input type="submit" value="Mostrar Catálogo">
         </form>
 
-        <form method="GET" action="main.php">
-            <label for="productId">ID del Producto:</label>
-            <input type="number" id="productId" name="productId" required>
-            <label for="quantity">Cantidad:</label>
-            <input type="number" id="quantity" name="quantity" value="1"
-                required>
+        <!-- Formulario para añadir producto al carrito -->
+        <form action="main.php" method="get">
             <input type="hidden" name="action" value="addProduct">
-            <button type="submit">Añadir Producto</button>
+            <label for="productId">ID Producto:</label>
+            <input type="number" name="productId" id="productId" required>
+            <label for="quantity">Cantidad:</label>
+            <input type="number" name="quantity" id="quantity" value="1" required>
+            <input type="hidden" name="userId" id="userIdInputAdd">
+            <input type="submit" value="Añadir al Carrito">
         </form>
 
-        <form method="GET" action="main.php"> <input type="hidden" name="action"
-                value="showCart"> <label for="userIdCart">ID de Usuario:</label>
-            <input type="number" id="userIdCart" name="userId" required> <button
-                type="submit">Mostrar Carrito</button>
+        <!-- Formulario para mostrar el carrito -->
+        <form action="main.php" method="get">
+            <input type="hidden" name="action" value="showCart">
+            <input type="hidden" name="userId" id="userIdInputCart">
+            <input type="submit" value="Mostrar Carrito">
         </form>
 
-        <form method="GET" action="main.php">
+        <!-- Formulario para eliminar un producto del carrito -->
+        <form action="main.php" method="get">
             <input type="hidden" name="action" value="removeProduct">
-            <button type="submit">Eliminar Producto (ID Fijo)</button>
+            <label for="removeProductId">ID Producto a eliminar:</label>
+            <input type="number" name="productId" id="removeProductId" required>
+            <input type="hidden" name="userId" id="userIdInputRemove">
+            <input type="submit" value="Eliminar del Carrito">
         </form>
-    </body>
+    </div>
+
+    <script>
+        // Obtener el ID del usuario de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('userId');
+
+        // Mostrar el ID del usuario en la página
+        document.getElementById('userIdDisplay').textContent = userId;
+
+        // Insertar el ID del usuario en los formularios
+        document.getElementById('userIdInput').value = userId;
+        document.getElementById('userIdInputAdd').value = userId;
+        document.getElementById('userIdInputCart').value = userId;
+        document.getElementById('userIdInputRemove').value = userId;
+    </script>
+</body>
+
 </html>

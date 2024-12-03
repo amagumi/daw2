@@ -9,19 +9,19 @@
     <product>
         <idProd>2</idProd>
         <prodName>manzana</prodName>
-        <qty>270</qty>
+        <qty>269</qty>
         <price>0.25</price>
     </product>
     <product>
         <idProd>3</idProd>
         <prodName>uva</prodName>
-        <qty>9444</qty>
+        <qty>9422</qty>
         <price>0.05</price>
     </product>
     <product>
         <idProd>4</idProd>
         <prodName>pera</prodName>
-        <qty>950</qty>
+        <qty>948</qty>
         <price>0.15</price>
     </product>
     <product>
@@ -33,7 +33,7 @@
     <product>
         <idProd>6</idProd>
         <prodName>casta&#xF1;a</prodName>
-        <qty>275</qty>
+        <qty>274</qty>
         <price>0.55</price>
     </product>
     <product>

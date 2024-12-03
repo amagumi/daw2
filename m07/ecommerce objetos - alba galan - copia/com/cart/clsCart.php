@@ -104,7 +104,7 @@ class clsCart
         foreach ($xml->xpath("/cart/productItem[idProd=$idProd]") as $idProd) {
             // echo 'encontrado' . "<br>";
             unset($idProd[0]); //unsettea el nodo cuando lo encuentra
-            // echo 'borrsdsdsdaado';
+            echo 'borrado';
         }
         // echo 'borrado';
         $xml->asXML('xmlDB/' . $username . 'Cart.xml'); // sobreescribe los resultados
