@@ -3,7 +3,7 @@
     <product>
         <idProd>1</idProd>
         <prodName>pepino</prodName>
-        <qty>831</qty>
+        <qty>821</qty>
         <price>0.15</price>
     </product>
     <product>
@@ -21,19 +21,19 @@
     <product>
         <idProd>4</idProd>
         <prodName>pera</prodName>
-        <qty>948</qty>
+        <qty>946</qty>
         <price>0.15</price>
     </product>
     <product>
         <idProd>5</idProd>
         <prodName>pimiento</prodName>
-        <qty>625</qty>
+        <qty>554</qty>
         <price>0.35</price>
     </product>
     <product>
         <idProd>6</idProd>
         <prodName>casta&#xF1;a</prodName>
-        <qty>274</qty>
+        <qty>232</qty>
         <price>0.55</price>
     </product>
     <product>
@@ -45,7 +45,7 @@
     <product>
         <idProd>8</idProd>
         <prodName>seta</prodName>
-        <qty>5290</qty>
+        <qty>5268</qty>
         <price>0.05</price>
     </product>
     <product>

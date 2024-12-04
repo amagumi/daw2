@@ -2,18 +2,18 @@
 class clsCart
 {
     private string $username;
-    private $catalog;
+    private object $catalog;
     private object $product;
 
-    public function __construct($username, $catalog)
+    public function __construct(string $username, object $catalog)
     {
         $this->username = $username;
         $this->catalog = $catalog;
-        $this->product = $this->loadCart();
+        $this->product = $this->_loadCart();
     }
 
 
-    private function loadCart()
+    private function _loadCart()
     {
         $cartFile = 'xmlDB/' . $this->username . 'Cart.xml';
         if (file_exists($cartFile)) {
@@ -67,7 +67,7 @@ class clsCart
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // mostrar el carrito en formato xml 
 
-    public function showCart()
+    public function showCart(): void
     {
         $cartFile = 'xmlDB/' . $this->username . 'Cart.xml';
 
@@ -83,7 +83,7 @@ class clsCart
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // actualiza el stock en el xml de catalogo
 
-    private function _updateCatalog($idProd, $newQtyCatalog)
+    private function _updateCatalog(int $idProd, int $newQtyCatalog)
     {
         $catalog = simplexml_load_file('xmlDB/catalog.xml');
 
@@ -97,14 +97,15 @@ class clsCart
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // eliminar un producto del carrito
 
-    public function removeFromCart($username, $idProd)
+    public function removeFromCart(string $username, int $idProd): void
     {
+        $p = $this->catalog->getProduct($idProd); // getProduct retorna un objeto de clase product
         $xml = simplexml_load_file('xmlDB/' . $username . 'Cart.xml');
         // ruta del xml de dentro, se quiere buscar el idprod 
         foreach ($xml->xpath("/cart/productItem[idProd=$idProd]") as $idProd) {
             // echo 'encontrado' . "<br>";
             unset($idProd[0]); //unsettea el nodo cuando lo encuentra
-            echo 'borrado';
+            echo 'el producto ' . $p->getProdName() . ' ha sido borrado de tu carrito';
         }
         // echo 'borrado';
         $xml->asXML('xmlDB/' . $username . 'Cart.xml'); // sobreescribe los resultados

@@ -24,7 +24,7 @@ switch ($action) {
             header("Location: index.html?userId=$userId");
             exit;
         } else {
-            echo "Error: ID de usuario no especificado.";
+            echo "error";
         }
         break;
 

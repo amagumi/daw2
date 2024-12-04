@@ -3,7 +3,7 @@
 class clsCatalog
 {
     //propiedad de catalog que almacena productos, por eso es un array
-    private $productsArr = [];
+    private array $productsArr = [];
 
     public function __construct()
     {
@@ -15,7 +15,7 @@ class clsCatalog
     // esta funcion lo que hace es convertir a objeto cada producto ya existente en el 
     // xml de catalogo
 
-    private function _loadFromXML($file)
+    private function _loadFromXML(string $file): void
     {
         if (file_exists($file)) {
             $catalogXML = simplexml_load_file($file);
@@ -34,14 +34,14 @@ class clsCatalog
 
 
     // agregar los objetos producto al catálogo
-    public function registerProduct(clsProduct $product)
+    public function registerProduct(clsProduct $product): void
     {
         $this->productsArr[$product->getIdProduct()] = $product;
     }
 
 
     //obtener un producto por ID
-    public function getProductById($id)
+    public function getProductById(int $id)
     {
         return $this->productsArr[$id] ?? null;
     }
@@ -49,7 +49,7 @@ class clsCatalog
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // mostrar todos los productos del catalogo xml
 
-    public function showCatalog()
+    public function showCatalog(): void
     {
         $file = 'xmlDB/catalog.xml';  // Ruta al archivo XML de tu catálogo
 
@@ -66,7 +66,7 @@ class clsCatalog
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // funcion que obtiene un objeto proucto del array de objetos 
 
-    function getProduct($idProd)
+    function getProduct(int $idProd)
     {
         foreach ($this->productsArr as $product) {
             if ($idProd == $product->getIdProduct()) {

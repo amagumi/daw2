@@ -1,13 +1,13 @@
 <?php
 class clsProduct
 {
-    private $idProduct;
-    private $prodName;
-    private $quantity;
-    private $price;
+    private int $idProduct;
+    private string $prodName;
+    private int $quantity;
+    private float $price;
 
 
-    public function __construct($idProduct, $prodName, $quantity, $price)
+    public function __construct(int $idProduct, string $prodName, int $quantity, float $price)
     {
         $this->idProduct = $idProduct;
         $this->prodName = $prodName;

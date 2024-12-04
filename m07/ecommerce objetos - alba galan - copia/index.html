@@ -1,73 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Usuario</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Carrito de Usuario</title>
+    </head>
 
-<body class="bodyIndex">
-    <h1>Carrito de Usuario</h1>
+    <body class="bodyIndex">
+        <div class="divCart">
 
-    <!-- Botón para volver al login -->
-    <div>
-        <a href="login.html"><button>Volver al Login</button></a>
-    </div>
+            <h1>Carrito de Usuario</h1>
 
-    <!-- Funcionalidades del carrito -->
-    <div class="container">
-        <p>ID del Usuario: <span id="userIdDisplay"></span></p>
+            <!-- Botón para volver al login -->
+            <div>
+                <a href="login.html"><button>Volver al Login</button></a>
+            </div>
 
-        <!-- Formulario para mostrar el catálogo -->
-        <form action="main.php" method="get">
-            <input type="hidden" name="action" value="showCatalog">
-            <input type="hidden" name="userId" id="userIdInput">
-            <input type="submit" value="Mostrar Catálogo">
-        </form>
+            <!-- Funcionalidades del carrito -->
+            <div class="container">
 
-        <!-- Formulario para añadir producto al carrito -->
-        <form action="main.php" method="get">
-            <input type="hidden" name="action" value="addProduct">
-            <label for="productId">ID Producto:</label>
-            <input type="number" name="productId" id="productId" required>
-            <label for="quantity">Cantidad:</label>
-            <input type="number" name="quantity" id="quantity" value="1" required>
-            <input type="hidden" name="userId" id="userIdInputAdd">
-            <input type="submit" value="Añadir al Carrito">
-        </form>
+                <!-- Formulario para mostrar el catálogo -->
+                <form action="main.php" method="get">
+                    <input type="hidden" name="action" value="showCatalog">
+                    <input type="hidden" name="userId" id="userIdInput">
+                    <input type="submit" value="Mostrar Catálogo">
+                </form>
 
-        <!-- Formulario para mostrar el carrito -->
-        <form action="main.php" method="get">
-            <input type="hidden" name="action" value="showCart">
-            <input type="hidden" name="userId" id="userIdInputCart">
-            <input type="submit" value="Mostrar Carrito">
-        </form>
+                <!-- Formulario para añadir producto al carrito -->
+                <form action="main.php" method="get">
+                    <input type="hidden" name="action" value="addProduct">
+                    <label for="productId">ID Producto:</label>
+                    <input type="number" name="productId" id="productId"
+                        required>
+                    <label for="quantity">Cantidad:</label>
+                    <input type="number" name="quantity" id="quantity" value="1"
+                        required>
+                    <input type="hidden" name="userId" id="userIdInputAdd">
+                    <input type="submit" value="Añadir al Carrito">
+                </form>
 
-        <!-- Formulario para eliminar un producto del carrito -->
-        <form action="main.php" method="get">
-            <input type="hidden" name="action" value="removeProduct">
-            <label for="removeProductId">ID Producto a eliminar:</label>
-            <input type="number" name="productId" id="removeProductId" required>
-            <input type="hidden" name="userId" id="userIdInputRemove">
-            <input type="submit" value="Eliminar del Carrito">
-        </form>
-    </div>
+                <!-- Formulario para mostrar el carrito -->
+                <form action="main.php" method="get">
+                    <input type="hidden" name="action" value="showCart">
+                    <input type="hidden" name="userId" id="userIdInputCart">
+                    <input type="submit" value="Mostrar Carrito">
+                </form>
 
-    <script>
-        // Obtener el ID del usuario de la URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const userId = urlParams.get('userId');
+                <!-- Formulario para eliminar un producto del carrito -->
+                <form action="main.php" method="get">
+                    <input type="hidden" name="action" value="removeProduct">
+                    <label for="removeProductId">ID Producto a eliminar:</label>
+                    <input type="number" name="productId" id="removeProductId"
+                        required>
+                    <input type="hidden" name="userId" id="userIdInputRemove">
+                    <input type="submit" value="Eliminar del Carrito">
+                </form>
+            </div>
 
-        // Mostrar el ID del usuario en la página
-        document.getElementById('userIdDisplay').textContent = userId;
+            <script>
+            // Obtener el ID del usuario de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const userId = urlParams.get('userId');
+    
+            // Insertar el ID del usuario en los formularios
+            document.getElementById('userIdInput').value = userId;
+            document.getElementById('userIdInputAdd').value = userId;
+            document.getElementById('userIdInputCart').value = userId;
+            document.getElementById('userIdInputRemove').value = userId;
+        </script>
 
-        // Insertar el ID del usuario en los formularios
-        document.getElementById('userIdInput').value = userId;
-        document.getElementById('userIdInputAdd').value = userId;
-        document.getElementById('userIdInputCart').value = userId;
-        document.getElementById('userIdInputRemove').value = userId;
-    </script>
-</body>
+        </div>
+
+    </body>
 
 </html>

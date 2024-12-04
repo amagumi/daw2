@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Login</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>ecommerce cart</title>
 
-</head>
+    </head>
 
-<body class="bodyLogin">
-    <h1>Iniciar Sesión</h1>
-    <form action="main.php" method="get">
-        <input type="hidden" name="action" value="login">
-        <label for="userId">ID Usuario:</label>
-        <input type="number" name="userId" id="userId" required>
-        <input type="submit" value="Iniciar Sesión">
-    </form>
-</body>
+    <body class="bodyLogin">
+        <div class="divLogin">
+            <h1>˚⋆ login ˚</h1>
+            <form action="main.php" method="get">
+                <input type="hidden" name="action" value="login">
+                <label for="userId">user id:</label>
+                <input type="number" name="userId" id="userId" required>
+                <input class="loginBtn" type="submit" value="Iniciar Sesión">
+            </form>
+
+        </div>
+
+    </body>
 
 </html>

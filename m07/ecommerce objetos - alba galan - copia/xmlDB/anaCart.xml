@@ -12,4 +12,5 @@
         <qty>10</qty>
         <price>2.5</price>
     </productItem>
-</cart>
+    
+<productItem><idProd>5</idProd><prodName>pimiento</prodName><qty>5</qty><price>1.75</price></productItem><productItem><idProd>6</idProd><prodName>casta&#xF1;a</prodName><qty>6</qty><price>3.3</price></productItem></cart>
